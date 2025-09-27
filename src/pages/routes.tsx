@@ -1,3 +1,4 @@
+import Loading from "@/components/Loader/Loading";
 import {
   createRouter,
   createRoute,
@@ -17,7 +18,7 @@ const HeroSectionOne = lazy(() => import("@/components/hero-section-demo-1"));
 
 // ------------------- Suspense Wrapper -------------------
 const withSuspense = (Component: React.ComponentType) => (
-  <Suspense fallback={<div>Loading...</div>}>
+  <Suspense fallback={<Loading/>}>
     <Component />
   </Suspense>
 );

@@ -6,12 +6,13 @@ import { router } from './pages/routes.tsx';
 import { Toaster } from "sonner";
 
 import { ErrorBoundary } from './pages/errorBoundary/ErrorBoundary.tsx';
+import Loading from './components/Loader/Loading.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ErrorBoundary  >
       <Suspense
-        fallback={<div className='w-full h-screen flex justify-center items-center' ><p className='text-3xl font-bold'>Loading...</p></div>}
+        fallback={<Loading/>}
       >
 
         <RouterProvider router={router} />
