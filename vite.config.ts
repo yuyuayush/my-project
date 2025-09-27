@@ -12,7 +12,8 @@ export default defineConfig({
         plugins: [['babel-plugin-react-compiler']],
       },
     }), tailwindcss(),
-  ], resolve: {
+  ], base: "/",
+  resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
